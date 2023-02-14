@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 import util
 
 # load the data
-X, y = util.get_nonlinear(1, 10)
+X, y = util.get_nonlinear(1, 10, 1000)
 
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(
