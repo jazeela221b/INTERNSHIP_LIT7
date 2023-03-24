@@ -1,7 +1,6 @@
 import random
 import numpy as np
 import torch
-import torch.nn as nn
 import torch.nn.functional as F
 from mlmodelwatermarking import TrainingWMArgs
 from mlmodelwatermarking.verification import verify
@@ -51,11 +50,10 @@ def MNIST_patch():
 
 ################################################################################################
 
-    # Build a new model and use the noisy_train_loader to train it
+    # Build a new model and use the noisy_train_loader to train it : extraction of model and verify its ownership
     stolen_model = LeNet()
     args.watermark = True
-    # extraction of model and verify its ownership
-    # add noise to the train_loader here and put it in the stolen_model
+
     # Define a function that adds Gaussian noise to an image
 
     def add_gaussian_noise(image, mean=0, std=1):
@@ -63,7 +61,7 @@ def MNIST_patch():
         noisy_image = image + noise
         return noisy_image
 
-    # Apply the noise function to each sample of the train_loader data
+    # Apply the noise function to each sample of the train_loader data : add noise to the trainset  and put it in the stolen_model
     noisy_train_loader = []
     for data in trainset:
         images, labels = data
@@ -71,7 +69,6 @@ def MNIST_patch():
         noisy_train_loader.append((noisy_images, labels))
     noisy_trainset = torch.utils.data.Subset(
         trainset.dataset, range(len(noisy_train_loader)))
-    #noisy_train_loader = torch.utils.data.DataLoader(noisy_trainset, batch_size=args.batch_size, shuffle=True)
 
     trainer_stolen = Trainer(
         model=stolen_model, args=args, trainset=noisy_trainset, valset=valset, testset=testset
