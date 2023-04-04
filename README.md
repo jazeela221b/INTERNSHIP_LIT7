@@ -9,22 +9,22 @@
 ## Installation
 
 To install the dependencies for this project, run the following command:
-    ```pip install -r requirements.txt```
+    `pip install -r requirements.txt`
 
 ### Using MLModelWatermarking
 
 [The MLModelWatermarking library](https://github.com/SAP/ml-model-watermarking) provides watermark machine learning models.ML Model Watermarking acts as a wrapper for your model, providing a range of techniques referred from the provided reference paper below for watermarking your model as well as ownership detection function
 #### To watermark in the model
-`from mlmodelwatermarking.markface import TrainerWM` 
-`trainer = TrainerWM(model=your_model)`
-`ownership = trainer.watermark()`
-`watermarked_model = trainer.get_model()`
+    from mlmodelwatermarking.markface import TrainerWM 
+    trainer = TrainerWM(model=your_model)
+    ownership = trainer.watermark()
+    watermarked_model = trainer.get_model()
 #### To verify if a model has been stolen:
-`from mlmodelwatermarking.marktorch import TrainerWM`
-`from mlmodelwatermarking.verification import verify`
-`trainer = TrainerWM(model=suspect_model, ownership=ownership)`
-`trainer.verify()`
-`#return a dictionary with information about the verification status`
+    from mlmodelwatermarking.marktorch import TrainerWM
+    from mlmodelwatermarking.verification import verify
+    trainer = TrainerWM(model=suspect_model, ownership=ownership)
+    trainer.verify()
+    #return a dictionary with information about the verification status
 
 
 ## Reference Papers used
