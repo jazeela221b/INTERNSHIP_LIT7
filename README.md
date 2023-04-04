@@ -7,5 +7,6 @@ To use this project, you need to have the following installed:
 
     Python 3.6 or higher
     The ml-model-watermarking library. You can install it using pip:
+    pip install ml-model-watermarking
 
-pip install ml-model-watermarking
+
