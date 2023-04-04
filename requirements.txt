@@ -1,0 +1,10 @@
+numpy
+sklearn
+torch
+transformers
+datasets
+torchvision
+pyfiglet
+tqdm
+bitstring
+ml-model-watermarking
