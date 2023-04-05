@@ -3,7 +3,7 @@
 - This project is about watermarking machine learning models using [the ml-model-watermarking library](https://github.com/SAP/ml-model-watermarking). The library provides methods for inserting watermarks into trained models, as well as extracting and verifying them.
 - Watermark models on various tasks, such as image classification or sentiment analysis, with compatibility with the main Machine Learning frameworks like Scikit-learn, PyTorch, or the HuggingFace library.
 - Here,we have created some baseline models and then watermarked them using the above library
-- our aim to do an experiemtn to verify the watermaking in the extracted models of baseline models and if not verified, understanding its limitation.
+- our aim to do an experiments to verify the watermaking in the extracted models of baseline models and if not verified, understanding its limitation.
 
 
 ## Installation
