@@ -50,7 +50,7 @@ def MNIST_patch():
 
 ################################################################################################
 
-    # Build a new model and use the noisy_train_loader to train it : extraction of model and verify its ownership
+    # Build a new model and use the noisy_train_loader to train it : adding noise to the trainsetand verify its ownership
     stolen_model = LeNet()
     args.watermark = True
 
@@ -61,7 +61,7 @@ def MNIST_patch():
         noisy_image = image + noise
         return noisy_image
 
-    # Apply the noise function to each sample of the train_loader data : add noise to the trainset  and put it in the stolen_model
+    # Apply the noise function to each sample of the train_loader data : add noise to the trainset
     noisy_train_loader = []
     for data in trainset:
         images, labels = data
