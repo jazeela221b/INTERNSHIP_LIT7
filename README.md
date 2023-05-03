@@ -29,8 +29,8 @@ To install the dependencies for this project, run the following command:
 
 ## Reference Papers used
 
-- [Turning Your Weakness Into a Strength: Watermarking Deep Neural Networks by Backdooring](https://www.usenix.org/conference/usenixsecurity18/presentation/adi)by Adi et al.
+
 - [Protecting Intellectual Property of Deep Neural Networks with Watermarking](https://dl.acm.org/doi/abs/10.1145/3196494.3196550?casa_token=RZrfzSIO_uwAAAAA:N7ohyz15GCGfoXRMtew-dX5dV-heZyI-N5Tod1xyKFWb46MXLPeqdfhMLizAFXlVE_VfZP_m2T3M) by Zhang et al.
 - [Adversarial frontier stitching for remote neural network watermarking](https://arxiv.org/pdf/1711.01894.pdf) by Merrer et al.
-- [DAWN: Dynamic Adversarial Watermarking of Neural Networks](https://arxiv.org/pdf/1906.00830.pdf) by Szyller et al.
+
 
